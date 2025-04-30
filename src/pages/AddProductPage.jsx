@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NavBarHome from '../component/NavBarHome';
+import MyShopNav from '../component/MyShopNav';
 
 const AddProductPage = () => {
     const [product, setProduct] = useState({
@@ -96,6 +97,7 @@ const AddProductPage = () => {
     return (
         <div>
             <NavBarHome />
+            <MyShopNav />
             <div className="container mt-5">
                 <h1 className="text fw-bold" style={{ fontSize: '30px', marginBottom: '50px' }}>Add New Product</h1>
                 {message && (

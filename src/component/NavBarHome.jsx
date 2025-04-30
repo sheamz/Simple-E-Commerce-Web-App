@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaSearch, FaShoppingCart, FaChevronDown, FaHome, FaShoppingBag, FaPlus } from 'react-icons/fa';
+import { FaSearch, FaShoppingCart, FaChevronDown, FaHome, FaShoppingBag, FaPlus, FaStore } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import logoWhite from '../assets/logoWhite.jpg'; 
 
@@ -138,10 +138,10 @@ const NavBarHome = () => {
                         <span
                             className="d-flex align-items-center text-white fw-bold"
                             style={{ cursor: 'pointer' }}
-                            onClick={() => navigate('/add-product')}
+                            onClick={() => navigate('/seller-dashboard')}
                         >
-                            <FaPlus className="me-2" />
-                            Add Product
+                            <FaStore className="me-2" />
+                            My Shop
                         </span>
                     </div>
                 </div>

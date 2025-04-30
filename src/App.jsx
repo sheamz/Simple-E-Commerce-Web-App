@@ -11,6 +11,10 @@ import AddProductPage from './pages/AddProductPage';
 import CartPage from './pages/CartPage';
 import ProductDetails from './pages/ProductDetails';
 import ProfileSetting from './pages/ProfileSetting';
+import SellerDashboard from './pages/SellerDashboard';
+import YourListing from './pages/YourListing';
+import YourOrders from './pages/YourOrders';
+import ShopSetting from './pages/ShopSetting';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,6 +45,11 @@ function AppContent() {
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/profile" element={<ProfileSetting />} />
+        <Route path="/seller-dashboard" element={<SellerDashboard />} />
+        <Route path="/your-listing" element={<YourListing />} />
+        <Route path="/your-orders" element={<YourOrders />} />
+        <Route path="/shop-setting" element={<ShopSetting />} />
+        <Route path="*" element={<div>404 Not Found</div>} /> 
       </Routes>
       {!noFooterRoutes.includes(location.pathname) && <Footer />}
     </>
