@@ -53,8 +53,7 @@ const RegisterPage = () => {
             <div className="d-flex flex-column justify-content-center align-items-center w-100 w-lg-50 bg-white px-4 px-lg-5 p-5">
                 <h2 className="mb-4 text-start w-75 w-lg-50 fw-bold">Get Started Now</h2>
                 <form className="w-75 w-lg-50" onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="fullName" className="form-label fw-medium fs-6 mb-0">Full Name</label>
+                    <div className="mb-2">
                         <input
                             type="text"
                             className="form-control rounded-2 mt-0"
@@ -63,12 +62,11 @@ const RegisterPage = () => {
                             value={formData.fullName}
                             onChange={handleChange}
                             placeholder="Enter your full name"
-                            style={{ fontSize: '14px' }}
+                            style={{ fontSize: '10px', height: '30px' }} 
                             required
                         />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="middleName" className="form-label fw-medium fs-6 mb-0">Middle Name</label>
+                    <div className="mb-2">
                         <input
                             type="text"
                             className="form-control rounded-2 mt-0"
@@ -77,11 +75,10 @@ const RegisterPage = () => {
                             value={formData.middleName}
                             onChange={handleChange}
                             placeholder="Enter your middle name"
-                            style={{ fontSize: '14px' }}
+                            style={{ fontSize: '10px', height: '30px' }} 
                         />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="lastName" className="form-label fw-medium fs-6 mb-0">Last Name</label>
+                    <div className="mb-2">
                         <input
                             type="text"
                             className="form-control rounded-2 mt-0"
@@ -90,12 +87,11 @@ const RegisterPage = () => {
                             value={formData.lastName}
                             onChange={handleChange}
                             placeholder="Enter your last name"
-                            style={{ fontSize: '14px' }}
+                            style={{ fontSize: '10px', height: '30px' }} 
                             required
                         />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="email" className="form-label fw-medium fs-6 mb-0">Email address</label>
+                    <div className="mb-2">
                         <input
                             type="email"
                             className="form-control rounded-2"
@@ -104,12 +100,11 @@ const RegisterPage = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Enter your email"
-                            style={{ fontSize: '14px' }}
+                            style={{ fontSize: '10px', height: '30px' }} 
                             required
                         />
                     </div>
-                    <div className="mb-4">
-                        <label htmlFor="password" className="form-label fw-medium fs-6 mb-0">Password</label>
+                    <div className="mb-2">
                         <div className="input-group">
                             <input
                                 type={showPassword.password ? 'text' : 'password'}
@@ -119,20 +114,15 @@ const RegisterPage = () => {
                                 value={formData.password}
                                 onChange={handleChange}
                                 placeholder="Enter your password"
-                                style={{ fontSize: '14px' }}
+                                style={{ fontSize: '10px', height: '30px' }} // Adjusted styles
                                 required
                             />
-                            <button
-                                type="button"
-                                className="btn btn-outline-secondary"
-                                onClick={() => togglePasswordVisibility('password')}
-                            >
+                            <span className="input-group-text" style={{ cursor: 'pointer' }} onClick={() => togglePasswordVisibility('password')}>
                                 {showPassword.password ? <FaEyeSlash /> : <FaEye />}
-                            </button>
+                            </span>
                         </div>
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="confirmPassword" className="form-label fw-medium fs-6 mb-0">Confirm Password</label>
                         <div className="input-group">
                             <input
                                 type={showPassword.confirmPassword ? 'text' : 'password'}
@@ -142,16 +132,12 @@ const RegisterPage = () => {
                                 value={formData.confirmPassword}
                                 onChange={handleChange}
                                 placeholder="Confirm your password"
-                                style={{ fontSize: '14px' }}
+                                style={{ fontSize: '10px', height: '30px' }} 
                                 required
                             />
-                            <button
-                                type="button"
-                                className="btn btn-outline-secondary"
-                                onClick={() => togglePasswordVisibility('confirmPassword')}
-                            >
+                            <span className="input-group-text" style={{ cursor: 'pointer' }} onClick={() => togglePasswordVisibility('confirmPassword')}>
                                 {showPassword.confirmPassword ? <FaEyeSlash /> : <FaEye />}
-                            </button>
+                            </span>
                         </div>
                     </div>
                     <div className="form-check mb-3">
@@ -159,7 +145,7 @@ const RegisterPage = () => {
                         <label
                             className="form-check-label fw-bold mb-3"
                             htmlFor="terms"
-                            style={{ fontSize: '14px' }}
+                            style={{ fontSize: '10px' }}
                         >
                             I agree to the <a href="/terms">terms & policy</a>
                         </label>
@@ -175,7 +161,7 @@ const RegisterPage = () => {
                     </div>
                 </form>
                 <div className="text-center mt-3">or</div>
-                <div className="d-flex flex-column flex-sm-row justify-content-between w-50 w-lg-50 gap-3 mt-3">
+                <div className="d-flex flex-column flex-sm-row justify-content-between w-75 w-lg-50 gap-3 mt-3">
                     <button className="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2 text-black">
                         <FaGoogle /> Sign in with Google
                     </button>
@@ -183,7 +169,7 @@ const RegisterPage = () => {
                         <FaApple /> Sign in with Apple
                     </button>
                 </div>
-                <div className="text-center mt-4 fw-bold">
+                <div className="text-center mt-4 fw-medium fs-25">
                     <span>Have an account? <a href="/login">Sign In</a></span>
                 </div>
             </div>

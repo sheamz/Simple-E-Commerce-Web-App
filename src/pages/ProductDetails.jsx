@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBarHome from '../component/NavBarHome';
-import AtomicImage from '../assets/atomic.jpg'; // Import the image for Atomic Habits
+import AtomicImage from '../assets/atomic.jpg'; 
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
