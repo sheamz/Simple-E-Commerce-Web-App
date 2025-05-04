@@ -16,10 +16,9 @@ const LoginPage = () => {
         <div className="container-fluid vh-100 d-flex flex-column flex-md-row">
             <div className="d-flex flex-column justify-content-center align-items-center w-50 w-md-50 bg-white px-4 px-md-5 py-4">
                 <h2 className="text-start w-75 w-lg-50 fw-bold">Welcome Back</h2>
-                <p className="mb-5 text-start w-75 w-lg-50 fw-normal">Enter your credentials to access your account</p>
+                <p className="mb-3 text-start w-75 w-lg-50 fw-normal">Enter your credentials to access your account</p>
                 <form className="w-75" onSubmit={handleSubmit}>
                     <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email address</label>
                         <input
                             type="email"
                             className="form-control"
@@ -28,10 +27,6 @@ const LoginPage = () => {
                             required
                         />
                     </div>
-                    <div className="mb-3 d-flex justify-content-between align-items-center">
-                        <label htmlFor="password" className="form-label">Password</label>
-                        <a href="/forgot-password" className="text-decoration-none">Forgot password?</a>
-                    </div>
                     <input
                         type="password"
                         className="form-control mb-3"
@@ -39,6 +34,13 @@ const LoginPage = () => {
                         placeholder="Enter your password"
                         required
                     />
+                    <a 
+                        href="/forgot-password" 
+                        className="text-decoration-none d-block text-end" 
+                        style={{ fontSize: '0.870rem' }}
+                    >
+                        Forgot password?
+                    </a>
                     <div className="form-check mb-3">
                         <input type="checkbox" className="form-check-input" id="remember" />
                         <label className="form-check-label" htmlFor="remember">
@@ -49,7 +51,7 @@ const LoginPage = () => {
                 </form>
 
                 <div className="text-center mt-3">or</div>
-                <div className="d-flex flex-column flex-sm-row justify-content-between w-50 w-lg-50 gap-3 mt-3">
+                <div className="d-flex flex-column flex-sm-row justify-content-between w-75 w-lg-50 gap-3 mt-3">
                     <button className="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2 text-black">
                         <FaGoogle /> Sign in with Google
                     </button>

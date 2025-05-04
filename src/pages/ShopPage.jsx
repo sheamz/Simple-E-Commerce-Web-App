@@ -203,7 +203,7 @@ const ShopPage = () => {
                                             className="card-img-top"
                                             alt={product.title}
                                             style={{
-                                                height: '650px', 
+                                                height: '450px', 
                                                 width: '100%', 
                                                 objectFit: 'cover', 
                                                 borderRadius: '10px',

@@ -15,6 +15,7 @@ import SellerDashboard from './pages/SellerDashboard';
 import YourListing from './pages/YourListing';
 import YourOrders from './pages/YourOrders';
 import ShopSetting from './pages/ShopSetting';
+import PastOrders from './pages/PastOrders';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -49,6 +50,7 @@ function AppContent() {
         <Route path="/your-listing" element={<YourListing />} />
         <Route path="/your-orders" element={<YourOrders />} />
         <Route path="/shop-setting" element={<ShopSetting />} />
+        <Route path="/past-orders" element={<PastOrders />} />
         <Route path="*" element={<div>404 Not Found</div>} /> 
       </Routes>
       {!noFooterRoutes.includes(location.pathname) && <Footer />}

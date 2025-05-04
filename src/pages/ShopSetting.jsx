@@ -3,22 +3,18 @@ import NavBarHome from '../component/NavBarHome';
 import MyShopNav from '../component/MyShopNav';
 
 const ShopSetting = () => {
-    // Default data for the form
     const defaultData = {
-        shopName: 'My Awesome Store',
-        shopDescription: 'We sell the best products at the best prices.',
-        shopAddress: '123 Main Street, Cityville, Country',
-        contactEmail: 'store@example.com',
+        shopName: 'Book Nook',
+        shopDescription: 'We sell the best book at the best prices.',
+        shopAddress: 'Silang, Cavite, Philippines',
+        contactEmail: 'booknook@gmail.com',
         contactNumber: '+1234567890',
         businessHours: 'Mon-Fri: 9 AM - 5 PM',
         shippingSchedule: 'Orders are shipped within 2-3 business days.',
         returnPolicy: 'Returns are accepted within 30 days of purchase.',
     };
 
-    // State to manage form data
     const [formData, setFormData] = useState(defaultData);
-
-    // State to toggle edit mode
     const [isEditing, setIsEditing] = useState(false);
 
     const handleChange = (e) => {
@@ -30,11 +26,11 @@ const ShopSetting = () => {
         e.preventDefault();
         console.log('Form Data Submitted:', formData);
         alert('Settings saved successfully!');
-        setIsEditing(false); // Exit edit mode after saving
+        setIsEditing(false);
     };
 
     const handleEdit = () => {
-        setIsEditing(true); // Enable edit mode
+        setIsEditing(true);
     };
 
     return (
@@ -42,41 +38,39 @@ const ShopSetting = () => {
             <NavBarHome />
             <MyShopNav />
             <div className="container mt-4">
-                <h1>Shop Settings</h1>
+                <h1 className="text-center">Shop Settings</h1>
                 {!isEditing ? (
-                    <div>
-                        {/* Display the current settings */}
+                    <div className="text-center">
                         <div className="mb-4">
-                            <h3>Personal Information</h3>
+                            <h3 style={{ color: 'purple' }}>Personal Information</h3>
                             <p><strong>Store Name:</strong> {formData.shopName}</p>
                             <p><strong>Description:</strong> {formData.shopDescription}</p>
                             <p><strong>Address:</strong> {formData.shopAddress}</p>
                         </div>
                         <div className="mb-4">
-                            <h3>Contact Information</h3>
+                            <h3 style={{ color: 'purple' }}>Contact Information</h3>
                             <p><strong>Email:</strong> {formData.contactEmail}</p>
                             <p><strong>Contact Number:</strong> {formData.contactNumber}</p>
                         </div>
                         <div className="mb-4">
-                            <h3>Business Hours / Shipping Schedule</h3>
+                            <h3 style={{ color: 'purple' }}>Business Hours / Shipping Schedule</h3>
                             <p><strong>Business Hours:</strong> {formData.businessHours}</p>
                             <p><strong>Shipping Schedule:</strong> {formData.shippingSchedule}</p>
                         </div>
                         <div className="mb-4">
-                            <h3>Return / Refund Policy</h3>
+                            <h3 style={{ color: 'purple' }}>Return / Refund Policy</h3>
                             <p>{formData.returnPolicy}</p>
                         </div>
-                        <button className="btn btn-secondary" onClick={handleEdit}>
+                        <button className="btn btn-secondary" style={{ backgroundColor: 'purple', borderColor: 'purple' }} onClick={handleEdit}>
                             Edit Settings
                         </button>
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit}>
-                        {/* Personal Information */}
+                    <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '600px' }}>
                         <div className="mb-4">
-                            <h3>Personal Information</h3>
+                            <h3 className="text-center" style={{ color: 'purple' }}>Personal Information</h3>
                             <div>
-                                <label htmlFor="shopName">Store Name:</label>
+                                <label htmlFor="shopName" style={{ color: 'purple' }}>Store Name:</label>
                                 <input
                                     type="text"
                                     id="shopName"
@@ -86,8 +80,8 @@ const ShopSetting = () => {
                                     className="form-control"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="shopDescription">Description:</label>
+                            <div className="mt-3">
+                                <label htmlFor="shopDescription" style={{ color: 'purple' }}>Description:</label>
                                 <textarea
                                     id="shopDescription"
                                     name="shopDescription"
@@ -96,8 +90,8 @@ const ShopSetting = () => {
                                     className="form-control"
                                 ></textarea>
                             </div>
-                            <div>
-                                <label htmlFor="shopAddress">Address:</label>
+                            <div className="mt-3">
+                                <label htmlFor="shopAddress" style={{ color: 'purple' }}>Address:</label>
                                 <input
                                     type="text"
                                     id="shopAddress"
@@ -108,12 +102,10 @@ const ShopSetting = () => {
                                 />
                             </div>
                         </div>
-
-                        {/* Contact Information */}
                         <div className="mb-4">
-                            <h3>Contact Information</h3>
+                            <h3 className="text-center" style={{ color: 'purple' }}>Contact Information</h3>
                             <div>
-                                <label htmlFor="contactEmail">Email:</label>
+                                <label htmlFor="contactEmail" style={{ color: 'purple' }}>Email:</label>
                                 <input
                                     type="email"
                                     id="contactEmail"
@@ -123,8 +115,8 @@ const ShopSetting = () => {
                                     className="form-control"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="contactNumber">Contact Number:</label>
+                            <div className="mt-3">
+                                <label htmlFor="contactNumber" style={{ color: 'purple' }}>Contact Number:</label>
                                 <input
                                     type="text"
                                     id="contactNumber"
@@ -135,12 +127,10 @@ const ShopSetting = () => {
                                 />
                             </div>
                         </div>
-
-                        {/* Business Hours / Shipping Schedule */}
                         <div className="mb-4">
-                            <h3>Business Hours / Shipping Schedule</h3>
+                            <h3 className="text-center" style={{ color: 'purple' }}>Business Hours / Shipping Schedule</h3>
                             <div>
-                                <label htmlFor="businessHours">Business Hours:</label>
+                                <label htmlFor="businessHours" style={{ color: 'purple' }}>Business Hours:</label>
                                 <input
                                     type="text"
                                     id="businessHours"
@@ -150,8 +140,8 @@ const ShopSetting = () => {
                                     className="form-control"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="shippingSchedule">Shipping Schedule:</label>
+                            <div className="mt-3">
+                                <label htmlFor="shippingSchedule" style={{ color: 'purple' }}>Shipping Schedule:</label>
                                 <input
                                     type="text"
                                     id="shippingSchedule"
@@ -162,12 +152,10 @@ const ShopSetting = () => {
                                 />
                             </div>
                         </div>
-
-                        {/* Return / Refund Policy */}
                         <div className="mb-4">
-                            <h3>Return / Refund Policy</h3>
+                            <h3 className="text-center" style={{ color: 'purple' }}>Return / Refund Policy</h3>
                             <div>
-                                <label htmlFor="returnPolicy">Policy:</label>
+                                <label htmlFor="returnPolicy" style={{ color: 'purple' }}>Policy:</label>
                                 <textarea
                                     id="returnPolicy"
                                     name="returnPolicy"
@@ -177,10 +165,19 @@ const ShopSetting = () => {
                                 ></textarea>
                             </div>
                         </div>
-
-                        <button type="submit" className="btn btn-primary">
-                            Save Settings
-                        </button>
+                        <div className="text-center">
+                            <button type="submit" className="btn btn-primary me-2" style={{ backgroundColor: 'purple', borderColor: 'purple' }}>
+                                Save Settings
+                            </button>
+                            <button
+                                type="button"
+                                className="btn btn-secondary"
+                                style={{ backgroundColor: '#e0e0e0', color: 'purple' }}
+                                onClick={() => setIsEditing(false)}
+                            >
+                                Cancel
+                            </button>
+                        </div>
                     </form>
                 )}
             </div>
