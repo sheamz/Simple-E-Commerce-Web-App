@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
+import './mobile-styles.css';
 import Login from './auth/LoginPage'; 
 import Register from './auth/RegisterPage'; 
 import HomePage from './pages/HomePage';
