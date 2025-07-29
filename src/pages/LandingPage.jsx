@@ -15,22 +15,30 @@ const LandingPage = () => {
             <Navbar />
             <SlideLanding />
 
-            <div className="container mt-5" style={{ flex: '1', textAlign: 'center' }}>
-                <h3 className="text-center fw-bold">Trending this week</h3>
+            <div className="container mt-4 mt-md-5" style={{ flex: '1', textAlign: 'center' }}>
+                <h3 className="text-center fw-bold" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>Trending this week</h3>
                 <p className="text-center">"Discover the hottest picks of the week — the most talked-about <br /> books everyone’s reading right now!"</p>
 
-                <div className='container mt-5'> 
-                    <div className="row row-cols-1 row-cols-md-5 g-4 justify-content-center">
+                <div className='container mt-4 mt-md-5'> 
+                    <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 g-md-4 justify-content-center">
                         <div className="col">
                             <div className="card h-100 border-0">
                                 <img src={One} className="card-img-top" alt="Book 1" style={{ borderRadius: '10px' }} />
-                                <div className="card-body d-flex flex-column justify-content-between text-center mt-4" style={{ height: '230px' }}>
+                                <div className="card-body d-flex flex-column justify-content-between text-center mt-2 mt-md-4" style={{ height: 'auto', minHeight: '180px' }}>
                                     <div>
-                                        <h6 className="card-category fw-bold" style={{ color: '#8d27ae' }}>Non-Fiction</h6>
-                                        <h5 className="card-title mt-3 fw-bold">Atomic Habits</h5>
-                                        <p className="card-text">James Clear</p>
+                                        <h6 className="card-category fw-bold" style={{ color: '#8d27ae', fontSize: 'clamp(10px, 2vw, 14px)' }}>Non-Fiction</h6>
+                                        <h5 className="card-title mt-2 mt-md-3 fw-bold" style={{ fontSize: 'clamp(12px, 2.5vw, 18px)' }}>Atomic Habits</h5>
+                                        <p className="card-text" style={{ fontSize: 'clamp(11px, 2vw, 14px)' }}>James Clear</p>
                                     </div>
-                                    <p className="card-price mt-4 mx-auto" style={{ color: '#8d27ae', border: '1px solid #8d27ae', width: '100px', textAlign: 'center', borderRadius: '5px' }}>₱ 300.00</p>
+                                    <p className="card-price mt-2 mt-md-4 mx-auto" style={{ 
+                                        color: '#8d27ae', 
+                                        border: '1px solid #8d27ae', 
+                                        width: 'clamp(80px, 20vw, 100px)', 
+                                        textAlign: 'center', 
+                                        borderRadius: '5px',
+                                        fontSize: 'clamp(10px, 2vw, 14px)',
+                                        padding: '4px 8px'
+                                    }}>₱ 300.00</p>
                                 </div>
                             </div>
                         </div>
@@ -94,36 +102,40 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            <div className="w-100 mt-5" style={{ backgroundColor: '#dad2ff', padding: '50px' }}>
-                <div className="container text-start">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <FaTruck size={50} style={{ color: '#8d27ae' }} />
-                            <h5 className="fw-bold mt-3">Quick Delivery</h5>
-                            <p>Get your favorite books delivered to your doorstep in no time with our fast and reliable shipping.</p>
+            <div className="w-100 mt-4 mt-md-5" style={{ backgroundColor: '#dad2ff', padding: 'clamp(20px, 5vw, 50px)' }}>
+                <div className="container text-center text-md-start">
+                    <div className="row g-4">
+                        <div className="col-6 col-md-3">
+                            <FaTruck size={40} style={{ color: '#8d27ae' }} className="d-block d-md-none" />
+                            <FaTruck size={50} style={{ color: '#8d27ae' }} className="d-none d-md-block" />
+                            <h5 className="fw-bold mt-3" style={{ fontSize: 'clamp(14px, 3vw, 18px)' }}>Quick Delivery</h5>
+                            <p style={{ fontSize: 'clamp(12px, 2.5vw, 14px)' }}>Get your favorite books delivered to your doorstep in no time with our fast and reliable shipping.</p>
                         </div>
-                        <div className="col-md-3">
-                            <FaShieldAlt size={50} style={{ color: '#8d27ae' }} />
-                            <h5 className="fw-bold mt-3">Secure Payment</h5>
-                            <p>Shop with confidence using our safe and encrypted payment system.</p>
+                        <div className="col-6 col-md-3">
+                            <FaShieldAlt size={40} style={{ color: '#8d27ae' }} className="d-block d-md-none" />
+                            <FaShieldAlt size={50} style={{ color: '#8d27ae' }} className="d-none d-md-block" />
+                            <h5 className="fw-bold mt-3" style={{ fontSize: 'clamp(14px, 3vw, 18px)' }}>Secure Payment</h5>
+                            <p style={{ fontSize: 'clamp(12px, 2.5vw, 14px)' }}>Shop with confidence using our safe and encrypted payment system.</p>
                         </div>
-                        <div className="col-md-3">
-                            <FaAward size={50} style={{ color: '#8d27ae' }} />
-                            <h5 className="fw-bold mt-3">Best Quality</h5>
-                            <p>Enjoy top-notch books curated with care and guaranteed quality.</p>
+                        <div className="col-6 col-md-3">
+                            <FaAward size={40} style={{ color: '#8d27ae' }} className="d-block d-md-none" />
+                            <FaAward size={50} style={{ color: '#8d27ae' }} className="d-none d-md-block" />
+                            <h5 className="fw-bold mt-3" style={{ fontSize: 'clamp(14px, 3vw, 18px)' }}>Best Quality</h5>
+                            <p style={{ fontSize: 'clamp(12px, 2.5vw, 14px)' }}>Enjoy top-notch books curated with care and guaranteed quality.</p>
                         </div>
-                        <div className="col-md-3">
-                            <FaUndoAlt size={50} style={{ color: '#8d27ae' }} />
-                            <h5 className="fw-bold mt-3">Return Guarantee</h5>
-                            <p>Not satisfied? We offer hassle-free returns to ensure your complete satisfaction.</p>
+                        <div className="col-6 col-md-3">
+                            <FaUndoAlt size={40} style={{ color: '#8d27ae' }} className="d-block d-md-none" />
+                            <FaUndoAlt size={50} style={{ color: '#8d27ae' }} className="d-none d-md-block" />
+                            <h5 className="fw-bold mt-3" style={{ fontSize: 'clamp(14px, 3vw, 18px)' }}>Return Guarantee</h5>
+                            <p style={{ fontSize: 'clamp(12px, 2.5vw, 14px)' }}>Not satisfied? We offer hassle-free returns to ensure your complete satisfaction.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container mt-5 w-100">
-                <h3 className="fw-bold">Best Sellers</h3>
-                <div className="row row-cols-1 row-cols-md-4 mt-3" style={{ gap: '12%' }}>
+            <div className="container mt-4 mt-md-5 w-100">
+                <h3 className="fw-bold" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>Best Sellers</h3>
+                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 mt-3 g-3 g-md-4">
                     <div className="col">
                         <div className="card h-100 border-0">
                             <img src={One} className="card-img-top" alt="Book 1" style={{ borderRadius: '10px' }} />
@@ -157,9 +169,9 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            <div className="container mt-5">
-                <h3 className="fw-bold">Categories</h3>
-                <div className="row row-cols-1 row-cols-md-6 g-4">
+            <div className="container mt-4 mt-md-5">
+                <h3 className="fw-bold" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>Categories</h3>
+                <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 g-md-4">
                     <div className="col">
                         <div className="card h-100 border-0" style={{ backgroundColor: '#8d27ae', color: '#fff' }}>
                             <div className="card-body text-center">
